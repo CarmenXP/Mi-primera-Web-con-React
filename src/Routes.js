@@ -9,11 +9,11 @@ import DevelopersPages from './components/developers/DevelopersPage'
 function Routes(){
     return(
         <Switch>
-            <Route exact path ="/" componet={HomePages}/>
-            <Route path="/firefox" component={FirefoxPages}/>
-            <Route path="/projects" component={ProjectsPage}/>
-            <Route path="/developers" component={DevelopersPages}/>
-            <Route path="/about" component={AboutPage}/>
+            <Route exact path ="/" component={HomePages}/>
+            <Route  path="/firefox" component={FirefoxPages}/>
+            <Route  path="/projects" component={ProjectsPage}/>
+            <Route  path="/developers" component={DevelopersPages}/>
+            <Route  path="/about" component={AboutPage}/>
         </Switch>
     )
 }
