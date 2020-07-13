@@ -5,6 +5,7 @@ import AboutPage from './components/about/AboutPage'
 import FirefoxPages from './components/firefox/FirefoxPage'
 import HomePages from './components/home/HomePage'
 import DevelopersPages from './components/developers/DevelopersPage'
+import CatsPage from './components/cats/catsPage'
 
 function Routes(){
     return(
@@ -14,6 +15,7 @@ function Routes(){
             <Route  path="/projects" component={ProjectsPage}/>
             <Route  path="/developers" component={DevelopersPages}/>
             <Route  path="/about" component={AboutPage}/>
+            <Route path="/cats" component={CatsPage}/>
         </Switch>
     )
 }

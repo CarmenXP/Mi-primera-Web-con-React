@@ -12,6 +12,7 @@ const  App=()=> {
         <NavLink activeClassName="active" to="/projects">Proyectos</NavLink>
         <NavLink activeClassName="active" to="/developers">Desarrolladores</NavLink>
         <NavLink activeClassName="active" to="/about">Acerca de</NavLink>
+        <NavLink activeClassName="active" to="/cats">Gatos</NavLink>
       </nav>
       <Routes/>
     </div>
