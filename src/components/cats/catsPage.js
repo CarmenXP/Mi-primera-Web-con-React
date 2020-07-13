@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import CatCard from './catCard'
 
 
 class CatsPage extends Component{
@@ -41,7 +42,7 @@ class CatsPage extends Component{
     
 // segunda manera de rendrizar
 
-drawCat=cat=>{
+/*drawCat=cat=>{
     return <img width="120" src={cat.url}/>
 }
 render(){
@@ -51,8 +52,53 @@ render(){
 
         </div>
     )
-    }
+    }*/
 
+// tercera manera de renderizar
+/*drawCat=({url})=>{
+    return(<img width="120" src={url}/>
+    )
+}
+render(){
+    let {cats}=this.state
+    return(
+<div>
+    {cats.map(this.drawCat)}
+</div>
+    )
+}*/
+//cuarta manera de renderizar
+/*renderCats=()=>{
+    let {cats}= this.state
+    return cats.map(({url})=><img width="150" src={url}/>)
+}    
+
+render(){
+    return(
+        <div>
+            {this.renderCats()}
+        </div>
+    )
+
+}   */
+
+//modularizando para renderizar cuando ya es mucho código
+drawCat =cat=>{
+    return <CatCard  name={this.state.name} cat={cat}/>
+}
+
+renderCats = () =>{
+    let {cats}= this.state
+    return cats.map(this.drawCat)
+}
+    
+render(){
+    return(
+        <div>
+            {this.renderCats()}
+        </div>
+    )
+}
 
 
 
